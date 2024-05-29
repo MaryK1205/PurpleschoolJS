@@ -1,4 +1,4 @@
-function timer() {
+setInterval(function timer() {
     let lastDayOfYear = new Date(2024, 12, 31);
     let now = new Date();
     let month = 11 - now.getMonth();
@@ -14,5 +14,8 @@ function timer() {
     if (minuts < 10) minuts = '0' + minuts;
     if (sec < 10) sec = '0' + sec;
     clock.textContent = `${month} месяцев, ${days} дней, ${hours} часов, ${minuts} минут, ${sec} секунд`;
-}
-setInterval(timer, 1000);
+    //setInterval(clock.textContent, 1000);
+
+}, 1000);
+
+
