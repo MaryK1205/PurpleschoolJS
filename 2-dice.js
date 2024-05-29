@@ -1,13 +1,8 @@
-let array = ['D4', 'D6', 'D8', 'D10', 'D12', 'D16', 'D20'];
+const array = { 4: "D4", 6: 'D6', 8: 'D8', 10: 'D10', 12: 'D12', 16: 'D16', 20: 'D20' };
 function dice(array) {
-    arrayRandom = [];
-    for (let i = 0; i < array.length - 1; i++) {
-        // let n = Number(array[i].replace('D', ''));
-        arrayRandom.push(Math.floor(Math.random() * Number(array[i].replace('D', '')) + 1));
+    Object.keys(array).forEach(element => { console.log(Math.floor(Math.random() * Number(element) + 1)) });
+};
+console.log(dice(array));
 
-    }
-    return arrayRandom;
-
-}
 
 console.log(dice(array));
